@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Compiled and minified CSS -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
+      <h1>info</h1>
+      <input
+        type="text"
+        id="pokemon-name"
+        placeholder="Escribe el nombre del pokemon"
+      />
+      <a class="waves-effect lime btn" onclick="fetchPokemon()"
+        ><i class="material-icons right">graphic_eq</i>Atrapalos YA!</a
+      >
 
-        <h1>info</h1>
-        <input type="text" id="pokemon-name" placeholder="Escribe el nombre del pokemon">
-        <button onclick="fetchPokemon()" >Atrapalos YA!</button>
-        <div  id="pokemon-info"></div>
+      <div id="pokemon-info"></div>
     </div>
-   <script src="/js/main.js"></script> 
-</body>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
