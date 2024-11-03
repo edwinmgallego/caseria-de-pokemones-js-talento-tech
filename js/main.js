@@ -1,6 +1,21 @@
 function fetchPokemon() {
-  fetch("https://pokeapi.co/api/v2/pokemon/ditto")
-    .then((res) => res.json())
+  const nombrePokemon = document
+    .getElementById("pokemon-name")
+    .value.toLowerCase();
+
+  if (nombrePokemon === "") {
+    alert("por favor , inggresa en nombre del pokemon");
+    return;
+  }
+
+  fetch(`https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("pokemon no encontrado");
+      }
+      return res.json();
+    })
+    .then((data) => displayPokemon(data))
     .then((data) =>
       displayPokemon(data).catch((error) =>
         console.error("error atrapando el pokemon: ", error)
